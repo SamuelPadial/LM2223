@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inspiration">
+    <title>Instagram</title>
     <style>
         div.white{
             display: inline;
@@ -13,11 +14,21 @@
         }
         fieldset{
             margin-left: 45%;
-            margin-right: 15%;
+            margin-right: 30%;
             margin-bottom: 2%;
-            text-align: center;
-            border-radius: 6px ;
+            text-align: justify;
+            border-radius: 4px;
+            background-color: #f2f2f2;
         }
+        input{
+            margin-bottom: 3px;
+        }
+        button{
+            align-items: center;
+            margin-top: 3px;
+            margin-left: 50%;
+        }
+
         h1{
             font-family: inspiration;
         }
@@ -35,17 +46,16 @@
             text-align: center;
         }
     </style>
-    <title>instagram</title>
 </head>
 <body>
-    <img src="../imagenes/instaback2.png" alt="">
+    <img src="../imagenes/instaback2.png" alt="Telefono instagram">
     <div class="white"></div>
     <fieldset>
         <h1>instagram</h1>
         <form method="post">
             <label for="usu">Usuario:</label>
             <input type="text" id="usu" name="usu">
-            <label for="pass">Pass:</label>
+            <label for="pass">Contraseña:</label>
             <input type="password" id="pass" name="pass">
             <button onclick="sendifo()">Iniciar sesion</button>
         </form>

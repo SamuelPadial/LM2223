@@ -1,0 +1,18 @@
+body{
+    background-image: linear-gradient(to bottom,green,white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    color: blue;
+    text-align: center;
+    font-size: 200%;
+}
+div{
+    border: solid 3px white;
+    margin-right: 60%;
+}
+p{
+color: yellow;
+margin-left: 20%;
+}
