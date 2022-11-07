@@ -1,0 +1,14 @@
+div.recuadrogris{
+    padding: 2%;
+    text-align: center;
+    font-size: 60px;
+    background-color: darkgray;
+    position: sticky;
+    top: 0%;
+}
+div.cajatexto{
+    text-align: left;
+    margin-bottom: 3%;
+    font-size: 15px;
+
+}

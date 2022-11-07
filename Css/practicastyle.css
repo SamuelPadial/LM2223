@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-h1{
+h1.encabezado{
     color: blue;
     text-align: center;
     font-size: 200%;
@@ -12,7 +12,7 @@ div{
     border: solid 3px white;
     margin-right: 60%;
 }
-p{
+p.parrafo{
 color: yellow;
 margin-left: 20%;
 }
