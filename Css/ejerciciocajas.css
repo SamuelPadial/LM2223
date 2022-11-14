@@ -1,0 +1,16 @@
+div.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+div.caja{
+    box-sizing: border-box;
+    background: url(../imagenes/naturaleza.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    align-items: center;
+    vertical-align: 100%;
+    height: 800px;
+    width: 100%;
+}

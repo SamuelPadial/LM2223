@@ -5,6 +5,7 @@ div.recuadrogris{
     background-color: darkgray;
     position: sticky;
     top: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 div.cajatexto{
     text-align: left;

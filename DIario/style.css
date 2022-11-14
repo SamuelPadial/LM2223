@@ -14,9 +14,11 @@ div.encabezado{
     position: sticky;
     top: 0px;
     font-size: 25px;
+    margin-bottom: 2%;
 }
 div.contenedor{
-    display: flex; 
+    display: flex;
+
 }
 div.texto{
     display: inline;
@@ -27,6 +29,10 @@ div.texto{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
+div.texto{
+    width: 20%;
+    padding: 2%;
+}
 div.texto:nth-child(2n-1){
     background-color: rgb(75, 82, 58);
 }
@@ -34,3 +40,9 @@ div.texto:nth-child(2n){
     background-color: rgb(105, 81, 58);
 
 }
+div.pie{
+    background-color: grey;
+    padding-top: 10%;
+    margin-top: 10%
+}
+

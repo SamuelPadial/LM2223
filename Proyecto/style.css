@@ -24,6 +24,9 @@ ul.barra{
     background-color: royalblue;
     border-bottom: solid gray 5px;
 }
+a.logo:hover{
+    background-color: royalblue !important;
+}
 li {
     float: left;
 }
@@ -127,6 +130,7 @@ div.texto1{
     margin-left: 4%;
     margin-right: 30%;
     margin-top: 7%;
+    margin-bottom: 10%;
     padding: 10px;
     display: inline;
     float: left;
@@ -134,30 +138,12 @@ div.texto1{
     font-family: sans-serif;
     font-size: 20px;
 }
-div.texto2{
-    background-color: darkred;
-    margin-left: 4%;
-    margin-right: 30%;
-    margin-top: 7%;
-    margin-bottom: 10%;
-    padding: 10px;
-    color: white;
-    font-family: sans-serif;
-    font-size: 20px;
-}
-
 img.banda{
     display: inline;
     float: right;
     margin-right: 4%;
     width: 400px;
-    overflow: auto;
 
-}
-
-ul.redes{
-    list-style-type: none;
-    margin-left: 4%;    
 }
 
 
@@ -181,9 +167,6 @@ img.album{
     margin-bottom: 2%;
     margin-top: 7%;
     box-shadow: 5px 5px 5px 5px darkred;
-}
-img{
-    width: 20px;
 }
 audio{
     margin: 5px;   
