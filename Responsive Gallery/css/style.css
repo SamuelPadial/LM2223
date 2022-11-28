@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
+div.encabezado{
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: wheat;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+div.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+
+}
+div.columna{
+    flex-grow: 30%;
+    max-width: 30%;
+    padding: 0 4px;
+}
+img{
+    margin-top: 8px;
+    vertical-align: middle;
+    
+}
