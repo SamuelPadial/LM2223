@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red social</title>
+</head>
+<body>
+    <input id="twit" type="textbox">
+    <button onclick="twitear()">Enviar</button>
+
+    <p>Pulsa el boton <img width="32" src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/trash-delete-remove-512.png">para sustraer elemento</p>
+    <button onclick="ordenar()">Ordenar</button>
+
+    <div id="mensaje"></div>
+
+    <script>
+        let twits = ["texto1","texto2"]
+        var longitud = twits.length;
+        
+        document.getElementById("mensaje").innerHTML = twits ;
+
+        function twitear(){
+            twits.push(document.getElementById("twit").value);
+            document.getElementById("mensaje").innerHTML = twits ;
+
+        }
+
+        function ordenar(){
+            twits.sort();
+            document.getElementById("mensaje").innerHTML = twits ;
+            
+        }
+
+        function remove(){
+            for (i=0; i < longitud; i=i+1){
+                delete twits[i];
+        }
+    }
+    
+        cuadro();
+
+function cuadro(){
+for (i=0; i < longitud; i=i+1){
+    document.write("<div class='rectangulo'>");
+    document.write("<img width='32' src='https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Twitter-Outline-512.png'>");
+    document.write(twits[i]);
+    document.write("<img width='32' onclick='remove()' src='https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/trash-delete-remove-512.png'>")
+    document.write("</div>")
+}
+}
+    </script>
+    
+</body>
+</html>

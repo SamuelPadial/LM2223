@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor dolar-euro</title>
+</head>
+<body>
+    
+    <h1>Conversor de moneda</h1>
+
+    <h3>Euros a Dolares</h3>
+    <input id="euro" type="texbox">
+    <button onclick="dolar()">Cambio</button>
+    <p id="resultado1"></p>
+
+    <h3>Dolares a Euros</h3>
+    <input id="dolar" type="textbox">
+    <button onclick="euro()">Cambio</button>
+    <p id="resultado2"></p>
+
+    <script>
+
+        function dolar(){
+            var conva = document.getElementById("euro").value * 1.09;
+            document.getElementById("resultado1").innerHTML = conva;
+        }
+
+        function euro(){
+            var convb = document.getElementById("dolar").value * 0.92;
+            document.getElementById("resultado2").innerHTML = convb;
+        }
+    </script>
+</body>
+</html>
