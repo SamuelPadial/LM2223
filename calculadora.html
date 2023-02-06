@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+
+    <button onclick="sum()">Suma</button>
+    <button onclick="res()">Suma</button>
+    <button onclick="mul()">Suma</button>
+    <button onclick="div()">Suma</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function sum(){
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value)
+
+            var solved = a+b
+            document.getElementById("resultado").innerHTML = solved
+        }
+
+        function res(){
+            
+        }
+
+        function mul(){
+            
+        }
+
+        function div(){
+            
+        }
+    </script>
+</body>
+</html>

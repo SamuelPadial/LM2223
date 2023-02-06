@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeracion</title>
+</head>
+<body>
+    <h1>Escribe un numero</h1>
+    <input id="numero" type="text">
+    <button onclick="MuestraNum()">Imprime numeros</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function MuestraNum(){
+
+           let numerito = document.getElementById("numero").value;
+           document.getElementById("mensaje").innerHTML=""; 
+           for (i=1; i <= numerito; i++){
+           document.getElementById("mensaje").innerHTML = document.getElementById("mensaje").innerHTML + i;
+        }
+    }
+    </script>
+</body>
+</html>
