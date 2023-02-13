@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red social</title>
+</head>
+<body>
+    <input id="twit" type="textbox">
+    <button onclick="twitear()">Enviar</button>
+
+    <p>Pulsa el boton <img width="32" src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/trash-delete-remove-512.png">para sustraer elemento</p>
+    <button onclick="ordenar()">Ordenar</button>
+
+    <div id="mensaje"></div>
+
+    <script>
+        
+        const twits = ["texto1","texto2"];
+        cuadro();
+
+        function twitear(){
+            twits.push(document.getElementById("twit").value)
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

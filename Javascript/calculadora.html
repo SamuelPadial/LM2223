@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+
+    <button onclick="sum()">suma</button>
+    <button onclick="res()">resta</button>
+    <button onclick="mul()">multiplica</button>
+    <button onclick="div()">divide</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        function sum(){ 
+            var a = (document.getElementById("num1").value);
+            var b = (document.getElementById("num2").value);
+            if(a =="" || b =="" || isNaN(a) || isNaN(b))
+                alert("Debes introducir un numero");
+            
+            else
+                
+            var solsum = a + b;
+            document.getElementById("resultado").innerHTML = solsum;
+
+        }
+    
+        function res(){ 
+            var a = (document.getElementById("num1").value);
+            var b = (document.getElementById("num2").value);
+            if(a =="" || b =="" || isNaN(a) || isNaN(b))
+                alert("Debes introducir un numero");
+            
+            else
+                
+            var solres = a - b;
+            document.getElementById("resultado").innerHTML = solres;
+
+        }
+        function mul(){ 
+            var a = (document.getElementById("num1").value);
+            var b = (document.getElementById("num2").value);
+            if(a =="" || b =="" || isNaN(a) || isNaN(b))
+                alert("Debes introducir un numero");
+            
+            else
+                
+            var solmul = a * b;
+            document.getElementById("resultado").innerHTML = solmul;
+
+        }
+        function div(){ 
+            var a = (document.getElementById("num1").value);
+            var b = (document.getElementById("num2").value);
+            if(a =="" || b =="" || isNaN(a) || isNaN(b)){
+                alert("Debes introducir un numero");
+            }
+            else if(b=="0"){
+            alert("No se puede dividir entre 0");
+            }
+            else{ 
+                
+            var soldiv = a / b;
+            document.getElementById("resultado").innerHTML = soldiv;
+            }
+        }
+        
+    </script>
+</body>
+</html>

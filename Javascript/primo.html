@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introduce un numero</h1>
+    <input type="text"id="numero">
+    <button onclick="comprueba()">Comprueba el numero</button>
+    <div id="resultado"></div>
+
+    <script>
+
+        function comprueba(){
+        let numerito = document.getElementById("numero").value;
+        let i="2" ;
+        let esPrimo = true;
+           while ( esPrimo && i<numerito){
+            if(numerito%i==0){
+                document.getElementById("resultado").innerHTML = "No es primo";
+                esPrimo=false;
+            }
+            i++;
+           }
+           if(esPrimo){
+            document.getElementById("resultado").innerHTML="Es primo";
+           }
+        }
+    </script>
+
+</body>
+</html>
