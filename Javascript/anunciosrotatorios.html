@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncios Rotatorios</title>
+</head>
+<body onload="banner()">
+    <h1>Anuncios rotatorios</h1>
+    <img src="" id="imgs">
+    <script>
+        let imagenes = ["imagenes/banner0.png","imagenes/banner1.png","imagenes/banner2.png","imagenes/banner3.png","imagenes/banner4.png","imagenes/banner5.png"];
+        var Nanuncios = imagenes.length;
+
+        function banner(){
+    
+            var position = Math.floor(Math.random()*Nanuncios);
+            var muestra = imagenes[position];
+            document.getElementById("imgs").src = muestra; 
+      
+            var intervalos = setInterval(function banner(){
+            var position = Math.floor(Math.random()*Nanuncios);
+            var muestra = imagenes[position];
+            document.getElementById("imgs").src = muestra;
+        }, 4000);
+        }
+    </script>
+</body>
+
+</html>
