@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,25 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anuncios Rotatorios</title>
 </head>
-<body onload="banner()">
+<body onload="banner(), linkreload()">
     <h1>Anuncios rotatorios</h1>
-    <img src="" id="imgs">
+    <a href="" id="link"><img src="" id="imgs"></a>
     <script>
-        let imagenes = ["imagenes/banner0.png","imagenes/banner1.png","imagenes/banner2.png","imagenes/banner3.png","imagenes/banner4.png","imagenes/banner5.png"];
+        let imagenes = ["../imagenes/banner0.png","../imagenes/banner1.png","../imagenes/banner2.png","../imagenes/banner3.png","../imagenes/banner4.png","../imagenes/banner5.png"];
+        let links = ["https://store.dsautomobiles.es/configurable","https://www.elcorteingles.es/supermercado/","https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/","https://www.madridhifi.com","https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ","https://www.tikamoon.es"]
         var Nanuncios = imagenes.length;
 
         function banner(){
     
-            var position = Math.floor(Math.random()*Nanuncios);
-            var muestra = imagenes[position];
-            document.getElementById("imgs").src = muestra; 
-      
-            var intervalos = setInterval(function banner(){
-            var position = Math.floor(Math.random()*Nanuncios);
-            var muestra = imagenes[position];
-            document.getElementById("imgs").src = muestra;
-        }, 4000);
-        }
+            var position1 = Math.floor(Math.random()*Nanuncios);
+            var muestra1 = imagenes[position1];
+            var linka1 = links[position1];
+            document.getElementById("imgs").src = muestra1; 
+            document.getElementById("link").href = linka1;
+
+            var intervalo1 = setInterval(function banner(){
+            var position2 = Math.floor(Math.random()*Nanuncios);
+            var muestra2 = imagenes[position2];
+            var linka2 = links[position2];
+            document.getElementById("imgs").src = muestra2;
+            document.getElementById("link").href = linka2;
+            }, 4000);
+
+
+        }  
+     
     </script>
 </body>
 
