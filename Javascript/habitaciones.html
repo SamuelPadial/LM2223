@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de habitaciones</title>
+</head>
+<body>
+    <h1>Reserva tu habitacion</h1>
+
+    <label for="adultos">Adultos:</label>
+    <input id="adultos" type="text">
+    <label for="ninos">Niños:</label>
+    <input id="ninos" type="text">
+    <button onclick="calc()">Calcular</button>
+
+    <div id="reserva"></div>
+
+    <script>
+
+        function calc(){
+            let adult = parseInt(document.getElementById("adultos").value);
+            let kid = parseInt(document.getElementById("ninos").value);
+            let fam=0, triple=0, doble=0, doble_sup=0;
+            let total = adult+kid;
+            if (kid>2*adult){
+                document.getElementById("reserva").innerHTML = "No se puede realizar reserva. La cantidad de niños supera a la de adultos";
+
+            }
+            else{
+                
+                if(kid == adult){
+                    total = kid + adult;
+                    if (total => 4){
+                        fam = Math.ceil(total/4);
+                        resto = total%4;
+                        if (resto !=0){
+                            dobles = 1;
+                        }
+                    }
+                }
+                else{
+                    while (kid>=1 && adult>=1){
+                        doble_sup+=1;
+                        adult-=2;
+                        kid-=1;
+                    }
+                    while (adult>=1){
+                        if (adult%3==0){
+                            triple+=1;
+                            adult-=3;
+                        }
+                        else{
+                            doble+=1;
+                            adultos-=2;
+                        }
+                    }
+                    total = adult+kid;
+                    if(total>=1){
+                        doble+=1;
+                    }
+
+                }
+                document.getElementById("reserva").innerHTML = "Nº de habitaciones familiares: "+fam+". Número de habitaciones triples: "+triple+". Nº de habitaciones dobles con supletoria: "+doble_sup+". Nº habitaciones dobles: " + doble;
+            }
+        }
+    </script>
+    
+</body>
+</html>
