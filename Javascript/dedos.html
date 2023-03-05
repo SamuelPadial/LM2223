@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="dedos">¿Cuantos dedos tengo?</label>
+    <input id="dedos" type="text">
+    <button id="compruebanum">Comprueba</button>
+
+    <script>
+        document.getElementById("compruebanum").onclick = function (){
+            var numrandom = Math.random();
+            numrandom = numrandom*6;
+            numrandom = Math.floor(numrandom);
+
+            if(document.getElementById("dedos").value == numrandom){
+                alert("Acertaste!!");
+            }
+            else{
+                alert("Fallaste, el numero era "+numrandom);
+            }
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>
