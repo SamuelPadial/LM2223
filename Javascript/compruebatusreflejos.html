@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #forma
+        {
+            width: 200px;
+            height: 200px;
+            background-color:red;
+            display: none;
+            position:relative;
+            top:100px;
+            left:200px;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>¡Comprueba tus reflejos!</h1>
+    <h2>¡Haz click en los circulos y rectangulos tan rapido como pueadas!</h2>
+
+    <p>Tiempo de reaccion:<span id="time"></span></p>
+    <div id="forma"></div>
+
+    <script>
+
+        var Tinicio = new Date().getTime();
+
+        function getcolor(){
+            let n = '0123456789ABCDEF'.split('');
+            let color = "#";
+            let i=0;
+            for (i = 0; i<6;i++){
+                color += n[Math.round(Math.random()*15)];
+            }
+            return color;
+        }
+
+        function mostrarforma(){
+            let top = Math.random()*400;
+            let left = Math.random()* 400;
+            let width = (Math.random()*200)+100;
+
+            if (Math.random()>0.5){
+                document.getElementById("forma").style.borderRadius = "50%";
+            }
+            else{
+                document.getElementById("forma").style.borderRadius = "0%";
+            }
+
+            document.getElementById("forma").style.width = width + "px";
+            document.getElementById("forma").style.height = width + "px";
+            document.getElementById("forma").style.backgroundColor = getcolor();
+            document.getElementById("forma").style.top = top + "px";
+            document.getElementById("forma").style.left = left + "px";
+            document.getElementById("forma").style.display = "block";
+            Tinicio = new Date().getTime();
+        }
+
+    function formaretraso(){
+        setTimeout(mostrarforma, Math.random()*2000);
+    }
+
+    formaretraso();
+    document.getElementById("forma").onclick = function ()
+    {
+        let fin,diferencia;
+        document.getElementById("forma").style.display = "none";
+        fin = new Date().getTime();
+        diferencia = (fin-Tinicio)/1000;
+        document.getElementById("time").innerHTML = diferencia + "s";
+        formaretraso();
+
+    }    
+    </script>
+</body>
+</html>
