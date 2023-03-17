@@ -1,0 +1,33 @@
+div.banner{
+    display: inline;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    height: 100px;
+    margin: 5px;
+    background-color: goldenrod;
+}
+h1{
+    background-color: goldenrod;
+}
+div.contenido{
+    display: flexbox;
+    background-color: beige;
+    
+}
+div.carrito{
+    background-color: white;
+    display: block;
+    width: 40px;
+    margin: 5%;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    color: goldenrod;
+    
+    
+}
+img{
+    width: 30px;
+    margin: 2px;
+}
