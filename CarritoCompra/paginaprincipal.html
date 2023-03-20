@@ -14,16 +14,23 @@
         <h1>Computer Components</h1>
     </div>
     <div class="contenido">
-        <div class="carrito" onclick="carro()">
-            <img src="https://cdn-icons-png.flaticon.com/512/1058/1058965.png" alt="">
-            <p id="carro-total"></p>
+        <div class="carrito">
+            <a href="cobro.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/1058/1058965.png" alt="">
+                <p id="carro-total"></p>
+            </a>
         </div>
         <div class="objetos">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul onload="cargaobjetos()">
+                <li id="teclado">
+                    <p class="nombre"></p>
+                    <img src="" alt="">
+                    <p class="precio"></p>
+                    <p class="descripcion"></p>
+                </li>
+                <li id="raton"></li>
+                <li id="pantalla"></li>
+                <li id="torre"></li>
             </ul>
 
             <div id="boton"></div>
