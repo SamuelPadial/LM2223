@@ -46,8 +46,8 @@ div.product{
     padding: 2%;
 }
 div.product img{
-    display: flex;
     align-items: center ;
+    width: 70%;
 }
 div.pagar{
     display: inline;
