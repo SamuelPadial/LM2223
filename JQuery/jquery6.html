@@ -7,27 +7,75 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#hide').click(function(){
-                $('h1#encabezado , p.par').animate({fontSize: '250%'});
-            });
-            $('#show').click(function(){
-                $('h1#encabezado , p.par').animate({fontSize: '100%'});
-            });
-        });
+            var parrafo = $('p').toArray().length;
+            var head = $('.encabezado').toArray().length;
+            var link = $('a').toArray().length;
+            var photo = $('img').toArray().length;
+            document.getElementById("npar").innerHTML = parrafo;
+            document.getElementById("nhed").innerHTML = head;
+            document.getElementById("nlin").innerHTML = link;
+            document.getElementById("nimg").innerHTML = photo;
+        })
+        
     </script>
-    <title>Jquery 3</title>
+    <title>Jquery 6</title>
 </head>
 <body>
-    <h1 id="encabezado">Encabezado nv1</h1>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    <table>
+        <tr>
+            <th>
+                Elemento
+            </th>
+            <th>
+                Cantidad
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Parrafos
+            </td>
+            <td id="npar">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Encabezados
+            </td>
+            <td id="nhed">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enlaces
+            </td>
+            <td id="nlin">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Imagenes
+            </td>
+            <td id="nimg">
+
+            </td>
+        </tr>
+    </table>
+    <h1 class="encabezado">Encabezado 1</h1>
+    <h3 class="encabezado">Encabezado 2</h3>
+    <p><a href="https://es.lipsum.com/">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
         nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, 
         sunt in culpa qui officia deserunt mollit anim id est laborum."
+    </a>
     </p>
-    <p class="par">
+    <p>
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
         quae ab illo inventore veritatis et quasi architecto beatae vitae 
@@ -55,7 +103,9 @@
         sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut 
         perferendis doloribus asperiores repellat."
     </p>
-    <button id="hide">Mas grande</button>
-    <button id="show">Menos grande</button>
+    
+    <img src="https://thumbs.dreamstime.com/z/sello-del-ejemplo-28420393.jpg" alt="">
+    <img src="https://i0.wp.com/get.witei.com/wp-content/uploads/2021/09/benchmarking-ejemplo-1-1-1-1.jpg?fit=800%2C450&ssl=1" alt="">
+    
 </body>
 </html>

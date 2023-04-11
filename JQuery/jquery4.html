@@ -9,13 +9,15 @@
         $(document).ready(function(){
             $('#hide').click(function(){
                 $('h1#encabezado , p.par').animate({fontSize: '250%'});
+                $('h1#encabezado, p.par').css({color: 'red'});
             });
             $('#show').click(function(){
                 $('h1#encabezado , p.par').animate({fontSize: '100%'});
+                $('h1#encabezado, p.par').css({color: 'black'});
             });
         });
     </script>
-    <title>Jquery 3</title>
+    <title>Jquery 4</title>
 </head>
 <body>
     <h1 id="encabezado">Encabezado nv1</h1>

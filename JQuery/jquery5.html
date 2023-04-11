@@ -8,14 +8,16 @@
     <script>
         $(document).ready(function(){
             $('#hide').click(function(){
-                $('h1#encabezado , p.par').animate({fontSize: '250%'});
+                $('h1#encabezado , p.par').fadeIn();
+                $('h1#encabezado, p.par').css({backgroundColor: 'red', color: 'white'});
             });
             $('#show').click(function(){
-                $('h1#encabezado , p.par').animate({fontSize: '100%'});
+                $('h1#encabezado , p.par').fadeOut();
+                $('h1#encabezado, p.par').css({backgroundColor: 'none', color: 'black'});
             });
         });
     </script>
-    <title>Jquery 3</title>
+    <title>Jquery 5</title>
 </head>
 <body>
     <h1 id="encabezado">Encabezado nv1</h1>
@@ -55,7 +57,11 @@
         sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut 
         perferendis doloribus asperiores repellat."
     </p>
-    <button id="hide">Mas grande</button>
-    <button id="show">Menos grande</button>
+
+    <p>fadeToggle() permite unir fadeIn y fadeOut en una unica funcion, comprobando si
+        el elemento esta oculto para mostrarlo y si ya esta siendo mostrado ocultarlo
+    </p>
+    <button id="hide">Mostrar</button>
+    <button id="show">Ocultar</button>
 </body>
 </html>
