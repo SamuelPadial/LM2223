@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.4.min.js"></script>
     <style>
         body{
             display: flex;
@@ -22,7 +23,7 @@
         input{
             margin-top: 2%;
             margin-bottom: 2%;
-            margin-right: 13%;
+            margin-right: 2%;
         }
         label{
             margin-top: 2%;
@@ -33,44 +34,114 @@
             margin-top: 4%;
             padding: 3%;
         }
+        #mensajeErrorCampos{
+            color: red;
+            margin-left: 3%;
+        }
     </style>
-    <script src="formscript.js"></script>
     <title>Formulario</title>
 </head>
 <body>
     <form method="post" action="">
-        <label for="name">Nombre</label>
-        <input type="text" name="nombre" id="name">
+        <label for="name">Nombre</label><br>
+        <input type="text" name="nombre" id="name"><br>
 
-        <label for="ape1">Primer Apellido</label>
-        <input type="text" name="apellido1" id="ape1">
+        <label for="ape1">Primer Apellido</label><br>
+        <input type="text" name="apellido1" id="ape1"><br>
 
-        <label for="ape2">Segundo Apellido</label>
-        <input type="text" name="apellido2" id="ape2">
+        <label for="ape2">Segundo Apellido</label><br>
+        <input type="text" name="apellido2" id="ape2"><br>
 
-        <label for="dni">DNI</label>
-        <input type="text" name="dni" id="dni">
+        <label for="dni">DNI</label><br>
+        <input type="text" name="dni" id="dni"><br>
 
-        <label for="paswd">Contraseña</label>
-        <input type="password" name="contraseña" id="paswd">
+        <label for="paswd">Contraseña</label><br>
+        <input type="password" name="contraseña" id="paswd"><br>
+        
+        <label for="paswd2">Confirmar contraseña</label><br>
+        <input type="password" name="contraseña" id="paswd2"><br>
 
-        <label for="email">Correo</label>
-        <input type="email" name="correo" id="email">
+        <label for="email">Correo</label><br>
+        <input type="email" name="correo" id="email"><br>
 
-        <label for="desc">Descripcion</label>
-        <input type="textarea" name="descripcion" id="desc">
+        <label for="desc">Descripcion</label><br>
+        <input type="textarea" name="descripcion" id="desc"><br>
 
-        <label for="bdy">Fecha Nacimiento</label>
-        <input type="date" name="fnacimiento" id="bdy">
+        <label for="bdy">Fecha Nacimiento</label><br>
+        <input type="date" name="fnacimiento" id="bdy"><br>
 
         <input type="checkbox" name="condition" id="chck">
         <label for="chck">Al hacer click acepta nuestro tratamiento de datos personales y
             contenido sensible
-        </label>
+        </label><br>
 
-        <button onclick="">Enviar</button>
+        <button id="BotonEnviar">Enviar</button>
+        <div id="mensajeErrorCampos"></div>
         <div id="mensaje"></div>
         
     </form>
+
+    <script>
+
+            function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+}
+
+        $("#BotonEnviar").clcick(function(){
+
+            var campoVacio = "";
+            var MensajeError = "";
+
+                if ($("#name").val()==""){
+                    campoVacio = campoVacio + "name<br>"
+                }
+
+                if ($("#ape1").val()==""){
+                    campoVacio = campoVacio + "ape1<br>"
+                }
+
+                if ($("#ape2").val()==""){
+                    campoVacio = campoVacio + "ape2<br>"
+                }
+
+                if ($("#email").val()=="")
+                {
+                    campoVacio = campoVacio + "email<br>";        
+                }
+          
+                if ($("#paswd").val()=="" && $("#paswd").length != 9)
+                {
+                    campoVacio = campoVacio + "paswd<br>";    
+                }
+                if ($("#paswd2").val()=="" && $("#paswd2").val!= $("#paswd").val())
+                {
+                    campoVacio = campoVacio + "paswd2<br>";    
+                }
+
+                if ($("#chck").val()=="")
+                {
+                    campoVacio = campoVacio + "chck<br>";    
+                }
+
+                if(isEmail($("#email").val())== false){
+                    MensajeError = MensajeError+"<p>Tu direccion de email no es valida</P>"
+                }
+
+                if (campoVacio!=""){
+                    MensajeError = "<p>Los siguientes campos estan vacios o incorrectos: </p>"+campoVacio+MensajeError;
+                }
+                if(MensajeError!=""){
+                    $("#mensajeErrorCampos").html(MensajeError);
+                }
+                else{
+                    var user = toLowerCase(name.substr(0,0)+ape1.substr(0,2)+ape2.substr(0,2)+dni.substr(-7,-4))
+                    $("#mensaje").html("El usuario "+user+ " se ha registrado con exito")
+
+                }
+        })
+
+           
+    </script>
 </body>
 </html>
